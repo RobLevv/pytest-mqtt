@@ -10,7 +10,7 @@ class MqttMessage:
 
     topic: str
     payload: t.Union[str, bytes]
-    userdata: t.Optional[t.Union[t.Dict, None]]
+    userdata: t.Optional[dict]
 
 
 @dataclasses.dataclass
