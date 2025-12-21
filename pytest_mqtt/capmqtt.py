@@ -30,7 +30,7 @@ logger = logging.getLogger(__name__)
 class MqttClientAdapter(threading.Thread):
     def __init__(
         self,
-        on_message_callback: t.Union[t.Callable, None] = None,
+        on_message_callback: t.Callable | None = None,
         host: str = "localhost",
         port: int = 1883,
         username: str = "guest",
@@ -135,7 +135,7 @@ class MqttCaptureFixture:
         return self._buffer
 
     @property
-    def records(self) -> list[tuple[str, t.Union[str, bytes], t.Optional[dict]]]:
+    def records(self) -> list[tuple[str, str | bytes, dict | None]]:
         return [(item.topic, item.payload, item.userdata) for item in self._buffer]
 
     def publish(self, topic: str, payload: str, **kwargs) -> MQTTMessageInfo:

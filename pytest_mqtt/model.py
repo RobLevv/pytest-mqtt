@@ -1,5 +1,4 @@
 import dataclasses
-import typing as t
 
 
 @dataclasses.dataclass
@@ -9,8 +8,8 @@ class MqttMessage:
     """
 
     topic: str
-    payload: t.Union[str, bytes]
-    userdata: t.Optional[dict]
+    payload: str | bytes
+    userdata: dict | None
 
 
 @dataclasses.dataclass
