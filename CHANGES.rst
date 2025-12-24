@@ -6,9 +6,16 @@ pytest-mqtt changelog
 in progress
 ===========
 
+2025-12-24 0.6.2
+================
+- CI: Verified support on Python 3.14
+
+2025-12-24 0.6.1
+================
+- Improve type hints and add ``py.typed``. Thanks, @RobLevv.
+
 2025-09-10 0.6.0
 ================
-
 - Added support for connecting with credentials. Thanks, @OliverWoolland
   and @tiniuclx.
 

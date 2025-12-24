@@ -6,11 +6,10 @@
 
 [project]
 name = "pytest-mqtt"
-version = "0.6.0"
+version = "0.6.2"
 description = "pytest-mqtt supports testing systems based on MQTT"
 readme = "README.rst"
 keywords = [ "mosquitto", "mqtt", "paho", "pytest", "testing" ]
-license = { text = "MIT" }
 authors = [
   { name = "Andreas Motl", email = "andreas.motl@panodata.org" },
   { name = "Richard Pobering", email = "richard.pobering@panodata.org" },
@@ -28,7 +27,6 @@ classifiers = [
   "Intended Audience :: Manufacturing",
   "Intended Audience :: System Administrators",
   "Intended Audience :: Telecommunications Industry",
-  "License :: OSI Approved :: MIT License",
   "Operating System :: MacOS :: MacOS X",
   "Operating System :: POSIX :: Linux",
   "Operating System :: Unix",
@@ -41,6 +39,7 @@ classifiers = [
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
   "Topic :: Communications",
   "Topic :: Education",
   "Topic :: Home Automation",
@@ -76,7 +75,6 @@ optional-dependencies.release = [
 optional-dependencies.test = [
   "coverage<8",
   "pytest<9",
-  "pytest-fixture-order<1",
   "pytest-httpserver<2",
   "pytest-ordering<1",
 ]
@@ -102,7 +100,7 @@ line-length = 120
 [tool.pytest.ini_options]
 minversion = "2.0"
 addopts = """
-  -rfEX -p pytester --strict-markers --verbosity=3
+  -rfEXS -p pytester --strict-markers --verbosity=3
   """
 log_level = "DEBUG"
 log_cli_level = "DEBUG"
